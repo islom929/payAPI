@@ -242,12 +242,24 @@ height: 100%;
 
 
 .header-hero {
-  background-image: url("../img/img-phone-your-app.png");
-  background-repeat: no-repeat;
-  background-position:center calc(0% + 110px);
-  background-size:128px 240px;
+
   z-index: 2;
   background-color: #EDF3F8;
+}
+
+.header-hero::after {
+  content: "";
+width: 128px;
+height: 240px;
+  display: block;
+  background-image: url("../img/img-phone-your-app.png");
+  top: 110px;
+  left: calc(50% - 64px);
+
+  background-repeat: no-repeat;
+  background-size:contain;
+  position: absolute;
+  z-index: 5;
 }
 
 
@@ -472,15 +484,25 @@ margin-right: auto;
 
 
 .simple__container {
-  background-image: url("../img/img-phones-implement.png");
-  background-repeat: no-repeat;
-  background-size: 330px 290px;
-background-position: center calc(0% + 50px);
-padding-top: 350px;
+padding-top: 30px;
  background-color: #EDF3F8;
- z-index: 88;
+ z-index: 8;
  padding-bottom: 80px;
 }
+
+.simple__container::before{
+  content:"";
+  width: 328px;
+  height: 290px;
+  display: block;
+  background-image: url("../img/img-phones-implement.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+background-position: center;
+z-index: 10;
+margin-left: auto;margin-right: auto;
+
+  }
 
 
 .simple__list {
@@ -742,7 +764,11 @@ opacity: 1;
 
 .header-hero {
   padding-bottom: 100px;
-  background-size:160px 300px;
+}
+.header-hero::after {
+width: 160px;
+height: 300px;
+  background-size:contain;
 }
 
 
@@ -819,7 +845,7 @@ height: 260px;
 
 .simple__container {
   background-size: 365px 320px;
-  padding-top: 400px;
+  padding-top: 50px;
   position: relative;
 }
 
@@ -842,18 +868,11 @@ align-items: flex-start;
 }
 
 .simple__container::before {
-  content: "";
-  width: 780px;
-  height: 780px;
-    display: block;
-  background-color: rgba(54, 83, 107, 0.15);
-  border-radius: 50%;
-  position: absolute;
-  bottom: calc(100% - 780px);
-  left: calc(100% - 390px);
-  z-index: -33;
-
+width: 363px;
+height: 320px;
 }
+
+
 
 
 /* TODO FOOTER TABLET  */
@@ -950,8 +969,15 @@ width: 43%;
 
 .header-hero {
   padding-bottom: 150px;
-  background-size: 265px 500px;
-  background-position: calc(50% + 197px) calc(0% + 162px);
+
+}
+
+.header-hero::after{
+  width: 265px;
+  height: 500px;
+  background-size:contain;
+  left: calc(50% + 197px);
+  top: calc(0% + 162px) ;
 }
 
 
@@ -1007,9 +1033,13 @@ width: 131px;
 /* TODO IMPLEMENT SIMPLE DESKTOP  */
 
 
-.implement__container {
+.implement__container{
   display: flex;
 align-items: center;
+}
+.implement__container {
+  padding-bottom: 0;
+
 }
 
 .implement__container::before {
@@ -1038,8 +1068,12 @@ align-items: center;
 
 .simple__container {
   padding-top: 250px;
-  background-position: right calc(0% + 100px);
-  background-size: 560px 500px;
+position: relative;
+
+}
+
+.simple__box {
+  margin-top: 100px;
 }
 
 .simple__list {
@@ -1050,6 +1084,28 @@ align-items: center;
 
   width: 110px;
   height: 110px;
+
+}
+
+.simple__container::before {
+  width: 563px;
+  height: 500px;
+  position: absolute;
+  left: calc(50% + 50px);
+  top: 150px;
+}
+
+.simple__container::after {
+  content: "";
+  width: 780px;
+  height: 780px;
+    display: block;
+  background-color: rgba(54, 83, 107, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  bottom: calc(100% - 780px);
+  left: calc(100% - 190px);
+  z-index: -33;
 
 }
 
