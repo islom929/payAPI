@@ -126,7 +126,7 @@ img {
   padding-bottom: 10px;
   cursor: pointer;
   margin-left: auto;
-z-index: 7;
+z-index: 77;
 }
 
 .header-hero {
@@ -140,7 +140,7 @@ z-index: 7;
   right: 0;
   bottom: 0;
   width: 80%;
-z-index: 5;
+z-index: 59;
 display: none;
 }
 
@@ -175,6 +175,10 @@ font-family: var(--font-public);
 color: var(--color-milk);
 }
 
+.nav__item:hover {
+  opacity: 1;
+}
+
 .button {
   text-decoration: none;
   padding-top: 16px;
@@ -204,7 +208,7 @@ border-radius: 50%;
 position: absolute;
 bottom: calc(100% - 235px);
 left: calc(50% - 390px);
-z-index: 3;
+z-index: 56;
 
 }
 
@@ -218,8 +222,13 @@ height: 100%;
   bottom: 0;
   width: 80%;
   background-color: rgba(27, 38, 47, 1);
-  z-index: 2;
+  z-index: 55;
 }
+
+.header--open .header::before {
+  z-index: 57;
+}
+
 
 .header--open .header__button {
   background-image: url("../img/cross.svg");
@@ -706,7 +715,7 @@ color: var(--color-red-hover);
   height: 950px;
   bottom: calc(100% - 286px);
   left: calc(100% - 475px);
-
+z-index: 3;
 }
 
 .header__button {
